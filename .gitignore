@@ -8,3 +8,5 @@ node_modules
 # Ignore files related to API keys
 .env
 
+# Ignore files related to build
+data
