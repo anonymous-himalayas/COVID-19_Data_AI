@@ -15,4 +15,4 @@ def get_index(data, index_name):
     return index
 
 covid_indexed = get_index(covid_pdf, "covid_indexed")
-covid_engine = covid_indexed.as_query_engine()
+covid_pdf_engine = covid_indexed.as_query_engine()
