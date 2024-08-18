@@ -3,7 +3,6 @@ from llama_index.core import StorageContext, VectorStoreIndex, load_index_from_s
 
 
 pdf_file = os.path.join("datasets", "COVID-19.pdf")
-print(os.path.exists(pdf_file))
 covid_pdf = SimpleDirectoryReader(input_files=[pdf_file]).load_data()
 
 def get_index(data, index_name):
