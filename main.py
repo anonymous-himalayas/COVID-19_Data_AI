@@ -11,11 +11,11 @@ load_dotenv()
 covid_data = os.path.join("datasets", "country_wise_latest.csv")
 covid_df = pd.read_csv(covid_data)
 
-print(covid_df.head())
+#print(covid_df.head())
 
 
-covid_query_engine = PandasQueryEngine(df=covid_df, verbose=True, instruction_str=instruction_str)
+covid_query_engine = PandasQueryEngine(df=covid_df, instruction_str=instruction_str)
 
 covid_query_engine.update_prompts({'pandas_prompt': new_prompt})
 
-covid_query_engine.query("What is the average of 'Deaths' in the dataframe?")
+covid_query_engine.query("What is the average of 'Deaths' in the covid dataframe?")
