@@ -1,12 +1,12 @@
 from dotenv import load_dotenv
 import os
 import pandas as pd
-from llama_index.experimental.query_engine import PandasQueryEngine
-from prompts import new_prompt, instruction_str, context
-from note_engine import note_engine
 from llama_index.core.tools import QueryEngineTool, ToolMetadata
 from llama_index.core.agent import ReActAgent
 from llama_index.llms.openai import OpenAI 
+from llama_index.core.query_engine import PandasQueryEngine
+from prompts import new_prompt, instruction_str, context
+from note_engine import note_engine
 from read_pdf import covid_pdf_engine
 load_dotenv()
 
