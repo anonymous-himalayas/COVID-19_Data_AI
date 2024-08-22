@@ -10,7 +10,7 @@ covid_pdf = SimpleDirectoryReader(input_files=[pdf_file]).load_data()
 def get_index(data, index_name):
     index = None
     if not os.path.exists(index_name):
-        index = VectorStoreIndex .from_documents(data, show_progress=True)
+        index = VectorStoreIndex.from_documents(data, show_progress=True)
         index.storage_context.persist(index_name)
     else:
         index = load_index_from_storage(StorageContext.from_defaults(persist_dir=index_name))
@@ -18,3 +18,5 @@ def get_index(data, index_name):
 
 covid_indexed = get_index(covid_pdf, "covid_indexed")
 covid_pdf_engine = covid_indexed.as_query_engine()
+
+#print(covid_pdf_engine.query("What is the structure of the COVID-19 virus?"))
