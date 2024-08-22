@@ -8,7 +8,7 @@ def save_notes(note):
         open(note_file, "w")
 
     with open(note_file, "a") as file:
-        file.write([note + "\n"])
+        file.write(note + "\n")
 
     return "Note saved successfully."
 
