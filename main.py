@@ -26,8 +26,8 @@ def main():
             description = 'This gives information about the COVID-19 virus at its base level including its structure and how it spreads. In addition, it describes the symptoms and how to prevent the spread of COVID-19.'
         ))
     ]
-    llm = OpenAI(model='gpt-3.5-turbo-0613')
-    agent = ReActAgent(tools=tools, llm=llm, verbose=True, context=context)
+    llm = OpenAI(model='gpt-3.5-turbo')
+    agent = ReActAgent.from_tools(tools=tools, llm=llm, verbose=True, context=context)
 
     while (prompt := input('Enter a prompt (q to quit): ')) != 'q':
         result = agent.query(prompt)
