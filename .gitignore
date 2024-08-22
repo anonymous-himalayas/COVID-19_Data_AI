@@ -13,3 +13,6 @@ data
 
 #Ignore pycache
 __pycache__
+
+# Ignore files related to index stores from llama index
+covid_indexed
