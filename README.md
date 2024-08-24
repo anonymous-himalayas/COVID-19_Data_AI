@@ -20,7 +20,11 @@ OpenAI has discontinued their free credits for using their API keys so you must 
 
 OPENAI_API_KEY=blah
 
+### Demo:
 
+<img src=./image/Demo.png length ="500" width="500">
+
+Using prompt engineering the COVID-19 engine is able to utilize resources such as a pdf on COVID-19 and a dataset regarding COVID-19 and give back an answer that briefly and accurately answers the user's questions. In addition, the model automatically utilizes what it thinks is the best tool to answer the user's question.
 
 ## Built With
 <div align="center">
