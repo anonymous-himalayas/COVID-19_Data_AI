@@ -17,5 +17,3 @@ __pycache__
 # Ignore files related to index stores from llama index
 covid_indexed
 
-# Ignore images
-image
