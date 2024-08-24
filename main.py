@@ -18,11 +18,11 @@ def main():
     tools = [
         note_engine,
         QueryEngineTool(query_engine=covid_query_engine, metadata=ToolMetadata(
-            name = 'Covid data',
+            name = 'country_wise_latest',
             description = 'This gives information about the COVID-19 virus in various countries such as cases and death counts.'
         )),
         QueryEngineTool(query_engine=covid_pdf_engine, metadata=ToolMetadata(
-            name = 'COVID pdf data',
+            name = 'COVID',
             description = 'This gives information about the COVID-19 virus at its base level including its structure and how it spreads. In addition, it describes the symptoms and how to prevent the spread of COVID-19.'
         ))
     ]
